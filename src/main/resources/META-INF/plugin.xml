@@ -7,12 +7,7 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.yanyouqiang1.myideaplugin.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.yanyouqiang1.myideaplugin.services.MyProjectService"/>
+        <toolWindow id="Arthas List" secondary="true" icon="AllIcons.General.Modified" anchor="right"
+                    factoryClass="com.yyq.MyToolWindowFactory"/>
     </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.yanyouqiang1.myideaplugin.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
 </idea-plugin>
