@@ -6,8 +6,11 @@
 
     <depends>com.intellij.modules.platform</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <toolWindow id="Arthas List" secondary="true" icon="AllIcons.General.Modified" anchor="right"
-                    factoryClass="com.yyq.MyToolWindowFactory"/>
-    </extensions>
+    <actions>
+        <action id="JPSCopy-forAthas" class="com.yyq.arthas.ArthasCmdGenerate" text="ArthasCmdGenerate"
+                description="Arthas启动命令生成">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt J"/>
+        </action>
+    </actions>
 </idea-plugin>
